@@ -1,0 +1,20 @@
+{
+    "name": "Incognito Launcher",
+    "version": "1.0",
+    "description": "Quick Incognito Launcher",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": {
+            "48": "images/incognitolauncher@48px.png",
+            "128": "images/incognitolauncher@128px.png"
+        }
+    },
+    "icons": {
+        "48": "images/incognitolauncher@48px.png",
+        "128": "images/incognitolauncher@128px.png"
+    },
+    "background":{
+        "scripts":["background.js"]
+    },
+    "permissions": ["tabs"]
+}
