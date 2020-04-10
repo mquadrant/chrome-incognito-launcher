@@ -6,6 +6,11 @@
 
 chrome.browserAction.onClicked.addListener(function(tab) {
     const createData = (tab.url !== '' || tab.url !== undefined) ? {url: tab.url} : {} ;
-    createData.incognito = true;
-    chrome.windows.create(createData);
+    if(!tab.incognito){
+        createData.incognito = true;
+        chrome.windows.create(createData);
+    }else {
+        createData.incognito = false;
+        chrome.windows.create(createData);
+    }
 })
